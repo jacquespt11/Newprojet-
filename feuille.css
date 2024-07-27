@@ -131,11 +131,11 @@ section {
   padding: 50px 20px;
 }
 
-.about, .services, .contact {
+.about, .services, .contact, .testimonials-section {
   text-align: center;
 }
 
-.about h2, .services h2, .contact h2 {
+.about h2, .services h2, .contact h2, .testimonials-section {
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -255,7 +255,7 @@ footer {
   .testimonials-item {
     display: flex;
     gap: 2px;
-    
+
   }
   .testimonials {
     background-color: #f6f6f6;
