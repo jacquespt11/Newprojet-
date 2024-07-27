@@ -1,0 +1,25 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cercle principal -->
+  <circle cx="100" cy="100" r="95" stroke="#FFD700" stroke-width="4" fill="none"/>
+
+  <!-- Main with plant -->
+  <g transform="translate(50, 50)">
+    <!-- Hand -->
+    <path d="M30 70 C20 60, 20 40, 30 30 L40 30 C50 30, 50 40, 40 40 L40 50 C50 50, 50 60, 40 60 L30 70 Z" fill="#fff"/>
+    <!-- Plant -->
+    <path d="M70 60 C65 50, 65 40, 70 30 L75 40 C75 30, 75 20, 80 10 C85 20, 85 30, 80 40 L85 30 C85 40, 85 50, 80 60 Z" fill="#fff"/>
+    <circle cx="80" cy="10" r="5" fill="#fff"/>
+  </g>
+
+  <!-- Sprout -->
+  <g transform="translate(60, 120)">
+    <path d="M20 20 C10 10, 10 0, 20 -10 L25 0 C25 -10, 25 -20, 30 -30 C35 -20, 35 -10, 30 0 L35 -10 C35 0, 35 10, 30 20 Z" fill="#fff"/>
+    <circle cx="30" cy="-30" r="5" fill="#fff"/>
+  </g>
+
+  <!-- Text "seprises" -->
+  <text x="100" y="180" font-family="Arial" font-size="24" text-anchor="middle" fill="#808080">seprises</text>
+
+  <!-- Text "CONGO" -->
+  <text x="100" y="200" font-family="Arial" font-size="16" text-anchor="middle" fill="#808080">CONGO</text>
+</svg>

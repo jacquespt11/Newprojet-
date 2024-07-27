@@ -1,0 +1,274 @@
+/* styles.css */
+
+/* Réinitialisation et configuration de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+
+}
+
+.prim {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.nav-menu {
+   display: none;
+ 
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #D4AF37;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+} text-decoration: none;
+  
+
+.nav-menu {
+  display: none;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+}
+
+/* Main content */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #ff6b6b, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  background-size: 200% 200%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2), 0 8px 24px 0 rgba(0,0,0,0.19);
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+}
+
+.about, .services, .contact {
+  text-align: center;
+}
+
+.about h2, .services h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.creative-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff6b6b, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services ul {
+  list-style: none;
+}
+
+.services li {
+  margin: 10px 0;
+}
+
+.parallax {
+  height: 500px;
+  background-image: url('Logosemeurs.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 500px;
+}
+
+.organic-hover {
+  position: relative;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.organic-hover:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.organic-hover:hover {
+  background-color: #3e8e41;
+}
+
+.organic-hover:hover:before {
+  width: 400px;
+  height: 400px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  
+  nav {
+    
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+      
+  }
+  .nav-menu {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .about h2, .services h2, .contact h2, .testimonials-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .testimonials-item {
+    display: flex;
+    gap: 2px;
+    
+  }
+  .testimonials {
+    background-color: #f6f6f6;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .testimonial {
+    margin-bottom: 40px;
+  }
+  
+  .testimonial p:first-child {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+}
