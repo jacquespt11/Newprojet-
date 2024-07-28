@@ -8,20 +8,20 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="menu-container">
       <div class="logo">
-        <a href="#"><img src="Logosemeurs.jpg" alt="Arrow Down" class="imageone"></a>
+        <a href="#"><img src="Logosemeurs.jpg" alt="Arrow Down" class="Logimage"></a>
       </div>
-      <input type="checkbox" id="menu-toggle">
+        <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">
-                <img src="bars-solid.svg" alt="Menu Icon">
+                <img src="bars-solid.svg" alt="Menu Icon" class="bars-solid"> 
             </label>
-      <ul class="nav-menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>     
+        <ul class="nav-menu">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>     
     </nav>
   </header>
 
@@ -75,13 +75,13 @@
         <div class="testimonials">
           <img
             src="rodrick.jpg"
-            alt="Photo de profil de rodrick" class="img-all"
+            alt="Photo de profil de rodrick" class="all-pucture"
           />
           <p class="paragraph">
             Cultivons ensemble.
           </p>
           <div class="name_standout">
-            <h3 class="name">Rodrick K.</h3>
+            <h3 class="name"><a href="https://www.facebook.com/photo.php?fbid=3647859908791188&set=a.1384490621794806&type=3&mibextid=rS40aB7S9Ucbxw6v">Rodrick K.</a></h3>
             <h4 class="standout">Coordonnateur</h4>
           </div>
         </div>
@@ -89,13 +89,13 @@
         <div class="testimonials">
           <img
             src="predy.jpg"
-            alt="Photo de profil de predy" class="img-all"
+            alt="Photo de profil de predy" class="all-pucture"
           />
           <p class="paragraph">
             L'entrepreneuriat, l'assurence d'avenir
           </p>
           <div class="name_standout">
-            <h3 class="name">Predy K.</h3>
+            <h3 class="name"><a href="https://www.facebook.com/photo.php?fbid=3602937103306834&set=a.1379336192333614&type=3&mibextid=rS40aB7S9Ucbxw6v">Predy K.</a></h3>
             <h4 class="standout">Secretaire</h4>
           </div>
         </div>
@@ -103,42 +103,48 @@
         <div class="testimonials">
           <img
             src="perfect.jpg"
-            alt="Photo de profil de perfect" class="img-all"
+            alt="Photo de profil de perfect" class="all-pucture"
           />
           <p class="paragraph">
             Semeurs des entreprises de la structure !
           </p>
 
           <div class="name_standout">
-            <h3 class="name">Perfect T.</h3>
+            <h3 class="name"><a href="https://www.facebook.com/photo.php?fbid=7097211227061469&set=a.103058669810128&type=3&mibextid=rS40aB7S9Ucbxw6v">Perfect T.</a></h3>
             <h4 class="standout">tresorier</h4>
           </div>
+        </div>  
 
         <div class="testimonials">
           <img
               src="meschac.jpg"
-              alt="Photo de profil de Mechack" class="img-all"
+              alt="Photo de profil de Mechack" class="all-pucture"
             />
           <p class="paragraph">
               Semeurs d'affaires rentables, Congo emergent !
           </p>
   
           <div class="name_standout">
-              <h3 class="name">Mechack Nk.</h3>
+              <h3 class="name"><a href="https://www.facebook.com/photo.php?fbid=334955488324083&set=a.104469754705992&type=3&mibextid=rS40aB7S9Ucbxw6v">Mechack Nk.</a></h3>
               <h4 class="standout">Superviseur</h4>
           </div>  
         </div>
-      </div>
     </div>
 
     </section>
 
     <section class="contact">
       <h2>Contactez-nous</h2>
-      <form>
-        <input type="text" placeholder="Nom" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
+      <form id="contact-form" action="http://localhost:3000/send" method="POST">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br>
+    
         <button type="submit">Envoyer</button>
       </form>
     </section>

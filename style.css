@@ -17,13 +17,15 @@ header {
   background-color: #333;
   color: #fff;
   padding: 10px 0;
+  display: block;
 
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  align-items: center;
+  padding: 0 20px;
 
 }
 
@@ -31,15 +33,7 @@ nav {
   display: flex;
   justify-content: space-between;
   margin: 20px;
-}
-.nav-menu {
-   display: none;
- 
-}
-menu-icon {
-  display: none;
-  cursor: pointer;
-}
+} 
 
 .menu-icon img {
   width: 30px;
@@ -47,38 +41,17 @@ menu-icon {
   margin-top: 20px;
 }
 
-#menu-toggle {
-  display: none;
+.menu-icon {
+  display: block;
 }
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
 .nav-menu li {
-  display: inline;
+  text-align: center;
 }
 
-.nav-menu a {
-  color: rgb(143, 141, 141);;
-  text-decoration: none;
-  font-size: 11px;
-  transition: color 
-  0.3s ease;
+#menu-toggle:checked + .menu-icon + .nav-menu {
+  display: flex;
 }
-
-.nav-menu a:hover {
-  background: yellow;
-  color:black ;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 20% 20%;
-    }
-
-
-img, .imageone {
+.logo, .Logimage {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -87,7 +60,7 @@ img, .imageone {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 } 
-.img-all {
+.all-pucture {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -97,30 +70,70 @@ img, .imageone {
 } 
   
 
-.nav-menu {
-  display: none;
-  list-style: none;
+.menu-container {
+  position: relative;
 }
 
-.nav-menu li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-}
-
-.hamburger {
+.menu-icon {
   display: block;
   cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
 }
 
-.hamburger .bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px auto;
-  transition: all 0.3s ease;
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 1px;
+  display: none;
+  flex-direction: column;
+  color:black ;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  height: 90vw;
+  width: 100px;
+  background: linear-gradient(rgb(4, 70, 48),rgb(255, 255, 255));
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding-top: 2px;
+  font-weight: bold;
+  border-radius: 10px;
+  position: fixed;
+  }
+  .nav-menu:hover {
+    list-style-type: none;
+    margin: 0;
+    padding: 1px;
+    display: none;
+    background: yellow;
+    color:black ;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 20% 20%;
+  }
+    
+  
+.nav-menu li {
+  margin: 20px;
+  text-align: right;
+}
+.nav-menu li a {
+  text-decoration: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .nav-menu {
+  display: flex;
 }
 
 /* Main content */
@@ -130,6 +143,9 @@ img, .imageone {
   background: linear-gradient(to right, #ff6b6b, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
   background-size: 200% 200%;
   animation: gradient-animation 10s ease infinite;
+}
+.testimonials-item{
+  margin-bottom: 20px;
 }
 
 @keyframes gradient-animation {
@@ -184,10 +200,21 @@ section {
 .about, .services, .contact, .testimonials-section {
   text-align: center;
 }
-
+.paragraph {
+  padding: 0 20px;
+  color: #474545;
+}
+.standout {
+  font-size: 18px;
+  color: #474545;
+}
+.testimonials{
+  margin-bottom: 60px;
+}
 .about h2, .services h2, .contact h2, .testimonials-section {
   font-size: 2rem;
   margin-bottom: 20px;
+  
 }
 
 .creative-text {
@@ -280,14 +307,28 @@ footer {
       margin: 20px;
       
   }
-  .nav-menu {
-    display: flex;
-    list-style-type: none;
-  }
-
-  .hamburger {
+  .menu-icon {
     display: none;
-  }
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    height: auto;
+    width: auto;
+    box-shadow: none;
+    padding-top: 0;
+}
+
+.nav-menu li {
+    margin: 10px;
+    text-align: left;
+}
+.nav-menu li a {
+  text-decoration: none;
+}
 
   .hero h1 {
     font-size: 3.5rem;
@@ -302,12 +343,14 @@ footer {
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
-  }
+    justify-content: center;
+    }
+
+  
   
   .testimonials-item {
     display: flex;
     gap: 4px;
-
 
   }
   .testimonials {
@@ -323,5 +366,17 @@ footer {
   .testimonial p:first-child {
     font-style: italic;
     margin-bottom: 20px;
+  }
+  .paragraph {
+    padding: 20px;
+    color: #474545;
+  }
+  .standout {
+    font-size: 18px;
+    color: #474545;
+  }
+  .name a {
+    text-decoration: none;
+    color: black;
   }
 }
